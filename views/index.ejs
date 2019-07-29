@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="Trực tiếp 3 miền, kết quả xổ số, ket qua xo so, ketqua,kqxs.vn xoso,lotto,nhanh nhất, tường thuật, tphcm,tp.hcm,xoso,mien nam, ket qua,binh duong,quang ninh,ket qua, thu do,kqxs,xsmb,kqtd,xsmn,xsbd,xskt,kqsx,kqxs">
+  <meta name="Description" content="Trực tiếp 3 miền, kết quả xổ số, ket qua xo so, ketqua,kqxs.vn xoso,lotto,nhanh nhất, tường thuật, tphcm,tp.hcm,xoso,mien nam, ket qua,binh duong,quang ninh,ket qua, thu do,kqxs,xsmb,kqtd,xsmn,xsbd,xskt,kqsx,kqxs">
+  <meta name="abstract" content="kqxs.vn">
+  <meta name="robots" content="follow,index">
+  <meta property="og:image" content="http://www.kqxs.vn/images/LG_03.jpg">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="color: white">
+    <a class="navbar-brand" href="/" style="color: white">Trang chủ</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: white">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/" style="color: white">
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mien-bac" style="color: white">Kết Quả Miền Bắc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mien-nam" style="color: white">Kết Quả Miền Nam</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mien-trung" style="color: white">Kết Quả Miền Trung</a>
+        </li>
+    </div>
+  </nav>
+  <div style="margin-top: 20px">
+    <div class="container">
+
+      <% kq.forEach(function(link) { %>
+        <div class="row">
+          <div class="col-6 mx-auto">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th class="bg-danger" style="color: white">Giải</th>
+                  <th>
+                    <%= link.label %>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <% link.data.forEach(function(d) { %>
+                  <tr>
+                    <td>
+                      <%= d.label %>
+                    </td>
+                    <td>
+                      <%= d.value %>
+                    </td>
+                  </tr>
+                  <% }); %>
+            </table>
+          </div>
+        </div>
+        <% }); %>
+    </div>
+  </div>
+</body>
+
+</html>
